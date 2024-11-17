@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        .centered-list { 
+            display: flex; 
+            justify-content: center; 
+            list-style-position: inside;
+            list-style-type: none; 
+            padding: 0; 
+            } 
+        .centered-list li { 
+            margin-bottom: 10px;
+            margin-right: 10px; /* Optional: Add some space between items */ 
+            } 
+        .centered-list button { 
+            display: inline-block; 
+            } 
+        </style>
+    
+    <script>
+        function checkTimeAndDisplay() {
+            // Get the current system time
+            const now = new Date();
+            const hours = now.getHours();
+            const chartDiv = document.getElementById('chartDiv');
+            const messageDiv = document.getElementById('messageDiv');
+
+            // Check if the current time is between 3 PM and 6 PM
+            if (hours >= 15 && hours < 18) {
+                chartDiv.style.display = 'block';
+                messageDiv.style.display = 'none';
+            } else {
+                chartDiv.style.display = 'none';
+                messageDiv.style.display = 'block';
+            }
+        }
+
+        // Run the function when the page loads
+        window.onload = checkTimeAndDisplay;
+    </script>
+</head>
+<body>
+    <center><h1>Task 3</h1></center>
+    <hr>
+    <br>
+    <center><p> Create a dual-axis chart that shows the number of media views and media engagements by the day of the week for the last quarter. Highlight days with significant spikes in media interactions. this graph should work between 3 PM to 6 PM and the tweet impression should be even number and tweet date should be odd number as well as tweet word count be below 30.</p></center>
+    <div id="chartDiv" style="display: none;">
+        <center><iframe title="PowerBi_Task_3" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiOGZjNDY4ZWMtY2JiYy00YzIxLThiZjItYjE5M2Y4NzhlOTRhIiwidCI6IjBiNzhmMGUzLTg0YTQtNDQ2Ni1hOGE5LTgxN2ExZmY1MzE1NCJ9" frameborder="0" allowFullScreen="true"></iframe></center>
+    </div>
+    <div id="messageDiv" style="display: none;">
+        <center><p style="color: rgb(151, 24, 60);">As per the instructions given , this chart will only display from 3 pm to 6 pm . <br><br>So kindly visit in the working hours ... <br><br><br>Thanks for visiting</p></center>
+    </div>
+    <br>
+    <hr>
+    <center><div>
+        <p>Here are the solutions for the tasks which are assigned by NullClass Internship providers</p>
+        <ul class="centered-list"> 
+            <li><button><a href="index.html">Back to Project</a></button></li> 
+            <li><button><a href="Task1.html">Task 1</a></button></li> 
+            <li><button><a href="Task2.html">Task 2</a></button></li> 
+        </ul>
+    </div>
+</center>
+
+</body>
+</html>
